@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+if(session.getAttribute("userEmail") != null){
+	 response.sendRedirect("index.jsp");
+	 return;
+}
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,12 +13,6 @@
 <title>Register</title>
 </head>
 <body>
-<%
-if(session.getAttribute("userEmail") != null){
-	 response.sendRedirect("index.jsp");
-	 return;
-}
-%>
 <h2><b>Register</b></h2>
 <br>
 <div>
